@@ -5,6 +5,7 @@
   --bg-white-alt: #eef2ff;
   --text-dark: #1e293b;
   --text-dark-alt: #94a3b8; 
+  --text-dark-alt-2: #334155; 
   font-family: 'Poppins', sans-serif;
   color: var(--text-dark);
   transition: .5s;
@@ -46,7 +47,43 @@ h1.my-nav-brand {
 .img-lists img.img-list.img-active {
   border: 2px solid var(--bg-white);
 }
+.btn-img a.btn-wa {
+  text-decoration: none;
+  background-color: #16a34a;
+  text-align: center;
+  padding: .5rem;
+  border-radius: .2rem;
+  color: #fff;
+}
+.btn-img a.btn-wa:hover {
+  background-color: #22c55e;
+}
+.btn-img a.btn-back {
+  text-decoration: none;
+  background-color: #dc2626;
+  text-align: center;
+  padding: .5rem;
+  border-radius: .2rem;
+  color: #fff;
+}
+.btn-img a.btn-back:hover {
+  background-color: #ef4444;
+}
 
+
+/* info */
+#info h2#info-title{
+  font-size: 2rem;
+}
+h6.harga {
+  font-size: 1.4rem;
+  color: var(--bg-main);
+  font-weight: 500;
+}
+#info p {
+  color: var(--text-dark-alt-2);
+  font-weight: 400;
+}
 
 /* mobile version */
 @media screen and (max-width:680px){
