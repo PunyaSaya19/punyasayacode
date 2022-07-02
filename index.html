@@ -67,7 +67,9 @@
                   class="btn-card d-flex justify-content-center align-items-center"
                 >
                   <a href="" class="btn-wa w-50 mx-1">Whatsapp </a>
-                  <a href="" class="btn-detail w-50 mx-1">Detail </a>
+                  <a href="detail/detail.html" class="btn-detail w-50 mx-1"
+                    >Detail
+                  </a>
                 </div>
               </div>
             </div>
@@ -277,5 +279,17 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/fontawesome/js/all.min.js"></script>
+    <script>
+      const xhr = new XMLHttpRequest();
+      xhr.onload = () => {
+        if (xhr.status == 200) {
+          console.log(xhr.responseText);
+        } else {
+          console.log("gagal load data");
+        }
+      };
+      xhr.open("GET", "resource.json");
+      xhr.send();
+    </script>
   </body>
 </html>

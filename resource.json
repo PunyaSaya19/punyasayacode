@@ -1,0 +1,12 @@
+[
+  {
+    "judul" : "Judul 1",
+    "deskripsi" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quas earum mollitia reiciendis ipsa, quam quod! Ipsa iste quidem et.",
+    "harga" : "65.000"
+  },
+  {
+    "judul" : "Judul 2",
+    "deskripsi" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quas earum mollitia reiciendis ipsa, quam quod! ",
+    "harga" : "75.000"
+  }
+]
