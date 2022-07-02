@@ -36,54 +36,60 @@
                 id="img-main"
               />
             </div>
-            <div class="img-lists mb-3">
+            <div class="img-lists mb-3" id="img-lists">
               <img
                 src="assets/img/nama-project/1.png"
                 alt="img list"
                 class="img-list m-1 img-active"
+                onclick="gantiImg(this)"
               />
               <img
                 src="assets/img/nama-project/2.png"
                 alt="img list"
                 class="img-list m-1 img-active"
+                onclick="gantiImg(this)"
               />
               <img
                 src="assets/img/nama-project/3.png"
                 alt="img list"
                 class="img-list m-1 img-active"
+                onclick="gantiImg(this)"
               />
               <img
                 src="assets/img/nama-project/4.png"
                 alt="img list"
                 class="img-list m-1 img-active"
+                onclick="gantiImg(this)"
               />
               <img
                 src="assets/img/nama-project/5.png"
                 alt="img list"
                 class="img-list m-1 img-active"
+                onclick="gantiImg(this)"
               />
               <img
                 src="assets/img/nama-project/6.png"
                 alt="img list"
                 class="img-list m-1 img-active"
+                onclick="gantiImg(this)"
               />
             </div>
             <div
               class="btn-img d-flex justify-content-center align-items-center"
             >
               <a href="index.html" class="btn-back w-50 mx-1">Kembali</a>
-              <a href="" class="btn-wa w-50 mx-1">Whatsapp</a>
+              <a href="" class="btn-wa w-50 mx-1" id="wa-beli">Whatsapp</a>
             </div>
             <hr class="w-100" />
           </div>
 
           <!-- detail -->
           <div class="col-md-6 col-sm-12" id="info">
-            <h2 id="info-title" class="mb-0">Sistem Management Laundry</h2>
-            <h6 class="harga mb-4">Rp. 65.000,-</h6>
+            <h2 class="mb-0" id="judul">Project 1</h2>
+            <h6 class="harga mb-4" id="harga">Rp.0,-</h6>
 
             <h6 class="sub-title">Deskripsi :</h6>
-            <p class="deskripsi">
+            <p class="deskripsi" id="deskripsi">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
               tempore ut deserunt alias ad culpa quod adipisci perspiciatis
               dolores nobis dolor, labore, repudiandae placeat magni quaerat
@@ -91,7 +97,7 @@
             </p>
 
             <h6 class="sub-title">Fitur-fitur :</h6>
-            <div class="fitur">
+            <div class="fitur" id="fitur">
               <ol>
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -121,11 +127,9 @@
             </div>
 
             <h6 class="sub-title">Teknologi :</h6>
-            <ul>
-              <li>Boostrap 4</li>
-              <li>Php Native</li>
-              <li>Boostrap 4</li>
-              <li>Boostrap 4</li>
+            <ul id="teknologi">
+              <li>Teknologi 1</li>
+              <li>Teknologo 2</li>
             </ul>
           </div>
         </div>
@@ -145,18 +149,90 @@
     <script src="assets/fontawesome/js/all.min.js"></script>
     <!-- <script src="assets/js/detail.js"></script> -->
     <script>
-      const url = window.location.search.substring(1);
-      const id_now = url.split("=")[1];
-      console.log(id_now);
-      const img_lists = document.querySelectorAll("img.img-list");
+      const img_lists = document.querySelector("#img-lists");
       const img_main = document.querySelector("#img-main");
+      const wa_beli = document.querySelector("#wa-beli");
+      const judul = document.querySelector("#judul");
+      const harga = document.querySelector("#harga");
+      const deskripsi = document.querySelector("#deskripsi");
+      const fitur = document.querySelector("#fitur");
+      const teknologi = document.querySelector("#teknologi");
+      const xhr = new XMLHttpRequest();
 
-      img_lists.forEach((e, i) => {
-        e.addEventListener("click", (el) => {
-          console.log(e.getAttribute("src"));
-          img_main.setAttribute("src", e.getAttribute("src"));
+      // action
+      xhr.onload = () => {
+        if (xhr.status == 200) {
+          const datas = JSON.parse(xhr.responseText);
+          console.log(datas);
+          const data_detail = searchData(datas.datas);
+          isiKontenDetail(data_detail, datas.wa);
+        } else {
+          console.log("gagal load data");
+        }
+      };
+      xhr.open("GET", "resource.json");
+      xhr.send();
+
+      // functions
+      function gantiImg(e) {
+        img_main.setAttribute("src", e.getAttribute("src"));
+      }
+
+      function searchData(dt) {
+        const url = window.location.search.substring(1);
+        const id_now = url.split("=")[1];
+        let result = null;
+        dt.forEach((e) => {
+          if (e.id == id_now) {
+            result = e;
+          }
         });
-      });
+        return result;
+      }
+
+      function tmpltImgList(count, folder) {
+        let tmplt = ``;
+        for (let i = 1; i <= count; i++) {
+          tmplt += `
+          <img
+            src="${folder}${i}.png"
+            alt="img list"
+            class="img-list m-1 img-active"
+            onclick="gantiImg(this)"
+          />
+          `;
+        }
+        return tmplt;
+      }
+
+      function setLinkWa(judul, wa) {
+        return (
+          `https://api.whatsapp.com/send/?phone=${wa}&text=halo%20admin%20saya%20ingin%20membeli%20` +
+          judul.replace(" ", "%20")
+        );
+      }
+
+      function tmpltTeknologi(dt) {
+        let tmplt = ``;
+        dt.forEach((e) => {
+          tmplt += `<li>${e}</li>`;
+        });
+        return tmplt;
+      }
+
+      function isiKontenDetail(dt, wa) {
+        console.log(dt);
+        img_main.setAttribute("src", dt.img_folder + dt.img_main + ".png");
+        img_lists.innerHTML = tmpltImgList(dt.img_count, dt.img_folder);
+        wa_beli.setAttribute("href", setLinkWa(dt.judul, wa));
+        wa_beli.setAttribute("target", "_blank");
+        console.log(dt.fitur);
+        judul.innerHTML = dt.judul;
+        harga.innerHTML = dt.harga;
+        deskripsi.innerHTML = dt.deskripsi;
+        fitur.innerHTML = dt.fitur;
+        teknologi.innerHTML = tmpltTeknologi(dt.teknologi);
+      }
     </script>
   </body>
 </html>

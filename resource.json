@@ -1,12 +1,30 @@
-[
-  {
-    "judul" : "Judul 1",
-    "deskripsi" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quas earum mollitia reiciendis ipsa, quam quod! Ipsa iste quidem et.",
-    "harga" : "65.000"
-  },
-  {
-    "judul" : "Judul 2",
-    "deskripsi" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quas earum mollitia reiciendis ipsa, quam quod! ",
-    "harga" : "75.000"
-  }
-]
+{
+  "wa" : "6288971837666",
+  "datas" : 
+  [
+    {
+      "id" : "PRJ001",
+      "judul" : "Aplikasi Management Laundry",
+      "harga" : "Rp. 65.000",
+      "kategori" : ["PHP NATIVE", "WEB"],
+      "deskripsi" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, modi cupiditate. Ducimus, cum maxime explicabo aliquam laudantium ratione quidem eum dolores earum ad voluptate vero!",
+      "img_folder" : "assets/img/project-1/",
+      "img_count" : 4,
+      "img_main" : "main",
+      "fitur" : "<ol><li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates, eveniet.</li><li>Loremipsumdolor sit amet consectetur.</li><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Blanditiis fugit harum quo possimus cum nolla nobis rationevoluptatibus mollitia?</li><li>Lorem, ipsum.</li><li>lorem :<ol><li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus commodi odio ipsa at, voluptatem teneturpraesentium fugit quasi saepe tempora quibusdam distinctio itaque corrupti magnam, obcaecati eaque dicta assumenda ducimus.</li><li>Lorem ipsum dolor sit amet consectetur.</li></ol></li></ol>", 
+      "teknologi" : ["Boostrap 4", "AJAX JS", "PHP NATIVE"]
+    },
+    {
+      "id" : "PRJ002",
+      "judul" : "Aplikasi Pemilihan Osis",
+      "harga" : "Rp. 75.000",
+      "kategori" : ["CI4", "WEB"],
+      "deskripsi" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, modi cupiditate. Ducimus, cum maxime explicabo aliquam laudantium ratione.",
+      "img_folder" : "assets/img/project-2/",
+      "img_count" : 5,
+      "img_main" : "main",
+      "fitur" : "<ol><li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates, eveniet.</li><li>Loremipsumdolor sit amet consectetur.</li><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Blanditiis fugit harum quo possimus cum nolla nobis rationevoluptatibus mollitia?</li><li>Lorem, ipsum.</li></ol>", 
+      "teknologi" : ["Boostrap 5", "AJAX JS", "CI4"]
+    }
+  ]
+}

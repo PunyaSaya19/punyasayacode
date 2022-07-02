@@ -3,10 +3,10 @@ JSON
 id
 judul 
 harga (format rupiah)
-kategori array
+kategori (array)
 deskripsi
 img_folder
 img_count
 img_main
 fitur
-teknologi
+teknologi (array)

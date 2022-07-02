@@ -33,7 +33,7 @@
     <!-- main content -->
     <section id="main">
       <div class="container">
-        <div class="row">
+        <div class="row" id="main-content">
           <div class="col-md-4 col-sm-12 mb-3">
             <div class="card px-3 pt-3 my-card shadow-sm">
               <img
@@ -88,16 +88,66 @@
     ></script>
     <script src="assets/fontawesome/js/all.min.js"></script>
     <script>
+      const main_content = document.querySelector("#main-content");
       const xhr = new XMLHttpRequest();
       xhr.onload = () => {
         if (xhr.status == 200) {
-          console.log(xhr.responseText);
+          const datas = JSON.parse(xhr.responseText);
+          console.log(datas);
+          main_content.innerHTML = tmplt(datas.datas, datas.wa);
         } else {
           console.log("gagal load data");
         }
       };
       xhr.open("GET", "resource.json");
       xhr.send();
+
+      // functions
+      function tmplt(dt, wa) {
+        let tmplt = ``;
+        dt.forEach((e, i) => {
+          let lbl = ``;
+          let url_wa =
+            `https://api.whatsapp.com/send/?phone=${wa}&text=halo%20admin%20saya%20ingin%20membeli%20` +
+            e.judul.replace(" ", "%20");
+          e.kategori.forEach((a) => {
+            lbl += `<div
+                    class="tag d-flex justify-content-center align-items-center m-1"
+                  >
+                    <i class="fas fa-circle mr-1"></i>
+                    <span>${a}</span>
+                  </div>`;
+          });
+          tmplt += `
+          <div class="col-md-4 col-sm-12 mb-3">
+            <div class="card px-3 pt-3 my-card shadow-sm">
+              <img
+                src="${e.img_folder}${e.img_main}.png"
+                class="card-img-top"
+                alt="Gambar Project"
+              />
+              <div class="card-body px-0">
+                <h5 class="card-title mb-0">${e.judul}</h5>
+                <div class="tags mb-2 d-flex">
+                 ${lbl}
+                 </div>
+                <h6 class="harga">${e.harga}</h6>
+                <p class="card-text">
+                  ${e.deskripsi}
+                </p>
+                <div
+                  class="btn-card d-flex justify-content-center align-items-center"
+                >
+                  <a href="${url_wa}" class="btn-wa w-50 mx-1" target="_blank">Whatsapp </a>
+                  <a href="detail.html?id=${e.id}" class="btn-detail w-50 mx-1">Detail </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          `;
+        });
+        return tmplt;
+      }
     </script>
   </body>
 </html>
