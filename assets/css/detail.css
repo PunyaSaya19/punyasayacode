@@ -17,7 +17,7 @@ html {
 
 body {
   background-color: var(--bg-white-alt);
-  min-height: 10000px;
+  min-height: 100vh;
 }
 
 /* navbar */
@@ -91,8 +91,14 @@ h6.harga {
     font-size: 1.5rem;
   }
 
-  #welcome h3 {
-    font-size: 1.15rem;
+  /* info */
+  #info h2#info-title{
+    font-size: 1.8rem;
+  }
+  h6.harga {
+    font-size: 1.2rem;
+    color: var(--bg-main);
+    font-weight: 500;
   }
 
 }

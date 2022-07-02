@@ -16,7 +16,7 @@ html {
 
 body {
   background-color: var(--bg-white-alt);
-  min-height: 10000px;
+  min-height: 100vh;
 }
 
 /* general */
