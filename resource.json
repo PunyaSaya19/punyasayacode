@@ -4,15 +4,15 @@
   [
     {
       "id" : "PRJ001",
-      "judul" : "Aplikasi Management Laundry",
+      "judul" : "Pengelolaan Kas Masjid",
       "harga" : "Rp. 65.000",
       "kategori" : ["PHP NATIVE", "WEB"],
       "deskripsi" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, modi cupiditate. Ducimus, cum maxime explicabo aliquam laudantium ratione quidem eum dolores earum ad voluptate vero!",
-      "img_folder" : "assets/img/project-1/",
-      "img_count" : 4,
+      "img_folder" : "assets/img/kas-masjid-native/",
+      "img_count" : 21,
       "img_main" : "main",
       "fitur" : "<ol><li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates, eveniet.</li><li>Loremipsumdolor sit amet consectetur.</li><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Blanditiis fugit harum quo possimus cum nolla nobis rationevoluptatibus mollitia?</li><li>Lorem, ipsum.</li><li>lorem :<ol><li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus commodi odio ipsa at, voluptatem teneturpraesentium fugit quasi saepe tempora quibusdam distinctio itaque corrupti magnam, obcaecati eaque dicta assumenda ducimus.</li><li>Lorem ipsum dolor sit amet consectetur.</li></ol></li></ol>", 
-      "teknologi" : ["Boostrap 4", "AJAX JS", "PHP NATIVE"]
+      "teknologi" : ["Boostrap 4", "Template Stisla", "PHP NATIVE"]
     },
     {
       "id" : "PRJ002",
