@@ -6,24 +6,19 @@
   --text-dark: #1e293b;
   --text-dark-alt: #94a3b8; 
   font-family: 'Poppins', sans-serif;
-  color: var(--text-dark);
+  /* color: var(--text-dark); */
   transition: .5s;
 }
 
 html {
   overflow-x: hidden;
+  color: var(--text-dark);
 }
 
 body {
   background-color: var(--bg-white-alt);
   min-height: 100vh;
 }
-
-/* general */
-/* i.fas.fa-circle.tag-circle-php {
-  color: red !important;
-  background-color: red !important;
-} */
 
 /* navbar */
 nav.my-nav {
@@ -54,6 +49,9 @@ h1.my-nav-brand {
 }
 
 /* main */
+#main {
+  min-height: 100vh;
+}
 .card.my-card {
   border: none;
   border-radius: .5rem;
@@ -112,6 +110,50 @@ h1.my-nav-brand {
   color: #fff;
 }
 
+/* footer */
+footer {
+  background-color: #312e81;
+}
+h5.foot-title {
+  color: var(--bg-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+p.foot-desc{
+  font-size: .8rem;
+  color: var(--bg-white-alt);
+  font-weight: 300;
+}
+.foot-icon a {
+  text-decoration: none;
+  color: var(--bg-white-alt);
+  padding: 0 .2rem;
+  font-size: 1.2rem;
+}
+.kontak h5.kontak-title{
+  color: var(--bg-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.kontak p {
+  font-size: .8rem;
+  color: var(--bg-white-alt);
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.pembayaran h5.kontak-pembayaran {
+  color: var(--bg-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.pembayaran img.img-mtd-pby {
+  width: 50px;
+  height: 25px;
+  margin: 0 .15rem;
+  border-radius: .35rem;
+  cursor: pointer;
+}
+
 /* mobile version */
 @media screen and (max-width:680px){
   h1.my-nav-brand {
@@ -120,6 +162,10 @@ h1.my-nav-brand {
 
   #welcome h3 {
     font-size: 1.15rem;
+  }
+
+  footer .foot-info {
+    margin-bottom: 1rem;
   }
 
 }
