@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="assets/css/detail.css" />
   </head>
   <body>
+    <!-- loading -->
+    <div id="loading">
+      <img src="assets/spiner/spiner.gif" alt="" class="spiner-loading" />
+      <h5 class="text-loading mt-2">Loading...</h5>
+    </div>
+
     <!-- navbar -->
     <nav class="my-nav mb-5">
       <div class="container py-3">
@@ -24,13 +30,13 @@
     </nav>
 
     <!-- main content -->
-    <section id="main">
+    <section id="main" class="mb-3">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div class="img-main mb-2">
               <img
-                src="assets/img/nama-project/1.png"
+                src="assets/img/nama-project/main.png"
                 alt="gambar "
                 class="img-thumbnail"
                 id="img-main"
@@ -63,12 +69,6 @@
               />
               <img
                 src="assets/img/nama-project/5.png"
-                alt="img list"
-                class="img-list m-1 img-active"
-                onclick="gantiImg(this)"
-              />
-              <img
-                src="assets/img/nama-project/6.png"
                 alt="img list"
                 class="img-list m-1 img-active"
                 onclick="gantiImg(this)"
@@ -131,6 +131,11 @@
               <li>Teknologi 1</li>
               <li>Teknologo 2</li>
             </ul>
+
+            <h6 class="sub-title">Keterangan Lain :</h6>
+            <div class="keterangan">
+              <ul id="keterangan"></ul>
+            </div>
           </div>
         </div>
       </div>
@@ -197,6 +202,7 @@
     <script src="assets/fontawesome/js/all.min.js"></script>
     <!-- <script src="assets/js/detail.js"></script> -->
     <script>
+      const loading = document.querySelector("#loading");
       const img_lists = document.querySelector("#img-lists");
       const img_main = document.querySelector("#img-main");
       const wa_beli = document.querySelector("#wa-beli");
@@ -205,6 +211,7 @@
       const deskripsi = document.querySelector("#deskripsi");
       const fitur = document.querySelector("#fitur");
       const teknologi = document.querySelector("#teknologi");
+      const keterangan = document.querySelector("#keterangan");
       const xhr = new XMLHttpRequest();
 
       // action
@@ -214,6 +221,7 @@
           console.log(datas);
           const data_detail = searchData(datas.datas);
           isiKontenDetail(data_detail, datas.wa);
+          hiddenLoadingScreen();
         } else {
           console.log("gagal load data");
         }
@@ -222,6 +230,10 @@
       xhr.send();
 
       // functions
+      function hiddenLoadingScreen() {
+        loading.classList.add("d-none");
+      }
+
       function gantiImg(e) {
         img_main.setAttribute("src", e.getAttribute("src"));
       }
@@ -236,6 +248,14 @@
           }
         });
         return result;
+      }
+
+      function tmpltKeterangan(ket) {
+        let tmplt = "";
+        ket.forEach((e) => {
+          tmplt += `<li>${e}</li>`;
+        });
+        return tmplt;
       }
 
       function tmpltImgList(count, folder) {
@@ -274,12 +294,13 @@
         img_lists.innerHTML = tmpltImgList(dt.img_count, dt.img_folder);
         wa_beli.setAttribute("href", setLinkWa(dt.judul, wa));
         wa_beli.setAttribute("target", "_blank");
-        console.log(dt.fitur);
         judul.innerHTML = dt.judul;
         harga.innerHTML = dt.harga;
         deskripsi.innerHTML = dt.deskripsi;
         fitur.innerHTML = dt.fitur;
         teknologi.innerHTML = tmpltTeknologi(dt.teknologi);
+        console.log(dt.keterangan_tambahan);
+        keterangan.innerHTML = tmpltKeterangan(dt.keterangan_tambahan);
       }
     </script>
   </body>

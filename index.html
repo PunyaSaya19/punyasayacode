@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- loading -->
+    <div id="loading">
+      <img src="assets/spiner/spiner.gif" alt="" class="spiner-loading" />
+      <h5 class="text-loading mt-2">Loading...</h5>
+    </div>
+
     <!-- navbar -->
     <nav class="my-nav fixed-top mb-5">
       <div class="container py-3">
@@ -31,13 +37,13 @@
     </section>
 
     <!-- main content -->
-    <section id="main">
+    <section id="main" class="mb-4">
       <div class="container">
         <div class="row" id="main-content">
           <div class="col-md-4 col-sm-12 mb-3">
             <div class="card px-3 pt-3 my-card shadow-sm">
               <img
-                src="assets/img/nama-project/1.png"
+                src="assets/img/nama-project/main.png"
                 class="card-img-top"
                 alt="Gambar Project"
               />
@@ -48,16 +54,16 @@
                     class="tag d-flex justify-content-center align-items-center m-1"
                   >
                     <i class="fas fa-circle mr-1"></i>
-                    <span>WEB</span>
+                    <span>Kategori 1</span>
                   </div>
                   <div
                     class="tag d-flex justify-content-center align-items-center m-1"
                   >
                     <i class="fas fa-circle mr-1"></i>
-                    <span>PHP NATIVE</span>
+                    <span>Kategori 2</span>
                   </div>
                 </div>
-                <h6 class="harga">Rp. 65.000,-</h6>
+                <h6 class="harga">Rp. 0,-</h6>
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium, recusandae tempore. Debitis fugit natus officiis
@@ -135,14 +141,16 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/fontawesome/js/all.min.js"></script>
+
     <script>
+      const loading = document.querySelector("#loading");
       const main_content = document.querySelector("#main-content");
       const xhr = new XMLHttpRequest();
       xhr.onload = () => {
         if (xhr.status == 200) {
           const datas = JSON.parse(xhr.responseText);
-          console.log(datas);
           main_content.innerHTML = tmplt(datas.datas, datas.wa);
+          hiddenLoadingScreen();
         } else {
           console.log("gagal load data");
         }
@@ -151,6 +159,10 @@
       xhr.send();
 
       // functions
+      function hiddenLoadingScreen() {
+        loading.classList.add("d-none");
+      }
+
       function tmplt(dt, wa) {
         let tmplt = ``;
         dt.forEach((e, i) => {

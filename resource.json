@@ -12,7 +12,12 @@
       "img_count" : 21,
       "img_main" : "main",
       "fitur" : "<ol><li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates, eveniet.</li><li>Loremipsumdolor sit amet consectetur.</li><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Blanditiis fugit harum quo possimus cum nolla nobis rationevoluptatibus mollitia?</li><li>Lorem, ipsum.</li><li>lorem :<ol><li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus commodi odio ipsa at, voluptatem teneturpraesentium fugit quasi saepe tempora quibusdam distinctio itaque corrupti magnam, obcaecati eaque dicta assumenda ducimus.</li><li>Lorem ipsum dolor sit amet consectetur.</li></ol></li></ol>", 
-      "teknologi" : ["Boostrap 4", "Template Stisla", "PHP NATIVE"]
+      "teknologi" : ["Boostrap 4", "Template Stisla", "PHP NATIVE"],
+      "keterangan_tambahan" : [
+        " Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error.",
+        "Kode dilengkapi dengan komentar-komentar sehingga mudah dipahami.",
+        "Bisa custom sesuai kebutuhan, tetapi akan di kenakan biaya tambahan."
+      ]
     },
     {
       "id" : "PRJ002",
@@ -24,7 +29,11 @@
       "img_count" : 5,
       "img_main" : "main",
       "fitur" : "<ol><li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates, eveniet.</li><li>Loremipsumdolor sit amet consectetur.</li><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Blanditiis fugit harum quo possimus cum nolla nobis rationevoluptatibus mollitia?</li><li>Lorem, ipsum.</li></ol>", 
-      "teknologi" : ["Boostrap 5", "AJAX JS", "CI4"]
+      "teknologi" : ["Boostrap 5", "AJAX JS", "CI4"],
+      "keterangan_tambahan" : [
+        " Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error.",
+        "Bisa custom sesuai kebutuhan, tetapi akan di kenakan biaya tambahan."
+      ]
     }
   ]
 }
