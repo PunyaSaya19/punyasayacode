@@ -3,6 +3,22 @@
   "datas" : 
   [
     {
+      "id" : "PRJ003",
+      "judul" : "Toko Sembako",
+      "harga" : "Rp. 50.000",
+      "kategori" : ["PHP NATIVE", "WEB"],
+      "deskripsi" : "Aplikasi ini sangat cocok untuk anda yang memiliki sebuah toko atau ruko. Aplikasi ini dapat mempermudah dalam memangement toko anda tetepi aplikasi ini juga cocok untuk orang awam yang ingin mempelajari sebuah website.",
+      "img_folder" : "assets/img/toko-sembako/",
+      "img_count" : 30,
+      "img_main" : "main",
+      "fitur" : "<ol><li>Landing Page</li><li>Halaman Untuk menampikan list produk-produk</li><li>Multiuser (Owner dan kasir)</li><li>Informatif Dashboard yang di lengkapi dengan grafik ststistik penjualan dan produk terlaris</li><li>CRUD data kategori (Owner)</li><li>CRUD data user/kasir (Owner)</li><li>CRUD data produk (Owner, Kasir)</li><li>Tambahkan Diskon produk (Owner)</li><li>Tambah Stok Masuk (Owner)</li><li>Tambah Stok Keluar (Owner)</li><li>Tambah Transaksi (Owner, Kasir)</li><li>Lihat Data Transaksi (Owner, Kasir)</li><li>Lihat Detail Transaksi (Owner, Kasir)</li><li>Cetak Invoice Transaksi (Owner, Kasir)</li><li>Cetak Laporan penualan dan pembelian stok (Owner)</li><li>Edit Profile (Owner, Kasir)</li></ol>", 
+      "teknologi" : [ "PHP NATIVE","Boostrap 5", "Template Mazer Admin", "toastify", "DOMPdf", "Datatables", "ChartJS"],
+      "keterangan_tambahan" : [
+        " Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error.",
+        "Bisa custom sesuai kebutuhan, tetapi akan di kenakan biaya tambahan."
+      ]
+    },
+    {
       "id" : "PRJ002",
       "judul" : "Aplikasi Pemilihan Osis",
       "harga" : "Rp. 50.000",
@@ -12,7 +28,7 @@
       "img_count" : 21,
       "img_main" : "main",
       "fitur" : "<ol><li>Multiuser (Admin dan Siswa)</li><li>Fitur Admin : <ul><li>Informatif Dashboard</li><li>Memulai dan memberhentikan acara pemilihan</li><li>CRUD data kandidat</li><li>CRUD data peserta/siswa</li><li>Upload excel untuk insert data peserta</li><li>Lihat Hasil Voting</li><li>Cetak laporan kandidat</li><li>Cetak laporan peserta (bisa pdf atau excel)</li><li>Cetak laporan hasil pemilihan</li><li>Edit Profile</li><li>Setting nama dan logo sekolah</li></ul></li><li>Fitur Siswa : <ul><li>Login</li><li>Memilih kandidat osis</li><li>Jika sudah memilih, siswa otomatis tidak bisa melakukan pemilihan lagi</li></ul></li></ol>", 
-      "teknologi" : [ "CI4","Boostrap 4", "Template Stisla", "Sweetalert2", "DOMPdf"],
+      "teknologi" : [ "CI4","Boostrap 4", "Template Stisla", "Sweetalert2", "DOMPdf", "ChartJS"],
       "keterangan_tambahan" : [
         " Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error."
       ]
@@ -26,7 +42,7 @@
       "img_folder" : "assets/img/kas-masjid-native/",
       "img_count" : 21,
       "img_main" : "main",
-      "fitur" : "<ol><li>Multilevel login(admin, takmir, jamaah)</li><li>login dan register untuk jamaah baru</li><li>CRUD data kas masuk(Admin, Takmir)</li><li>CRUD data kas keluar(Admin, Takmir)</li><li>Lihat data rekapitulasi (Admin, Takmir, Jamaah)</li><li>Cetak laporan kas masuk, kas keluar, rekapitulasi (Admin, Takmir, Jamaah)</li><li>Management user (Admin)</li><li>Edit profile (Admin, Takmir, Jamaah)</li><li>informatif dashboard</li></ol>", 
+      "fitur" : "<ol><li>Multilevel login(admin, takmir, jamaah)</li><li>login dan register untuk jamaah baru</li><li>CRUD data kas masuk(Admin, Takmir)</li><li>CRUD data kas keluar(Admin, Takmir)</li><li>Lihat data rekapitulasi (Admin, Takmir, Jamaah)</li><li>Cetak laporan kas masuk, kas keluar, rekapitulasi (Admin, Takmir, Jamaah)</li><li>Management user (Admin)</li><li>Edit profile (Admin, Takmir, Jamaah)</li><li>informatif dashboard</li><li>Untuk Jamaah hanya bisa lihat semua data dan mencetak laporan saja</li></ol>", 
       "teknologi" : ["PHP NATIVE", "Boostrap 4", "Template SB Admin 2", "Sweetalert2", "DOMPdf", "Datatables"],
       "keterangan_tambahan" : [
         "Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error.",
