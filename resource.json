@@ -5,14 +5,14 @@
     {
       "id" : "PRJ002",
       "judul" : "Aplikasi Pemilihan Osis",
-      "harga" : "Rp. 75.000",
+      "harga" : "Rp. 50.000",
       "kategori" : ["CI4", "WEB"],
-      "deskripsi" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, modi cupiditate. Ducimus, cum maxime explicabo aliquam laudantium ratione.",
+      "deskripsi" : "Aplikasi ini ditujukan untuk mempermudah dalam pemilihan osis yang di adakan di sekolah-sekolah. Program ini cocok untuk dijadikan bahan pembelajaran bagi seseorang yang baru belajar framework CI4 ataupun bisa langsung di gunakan untuk kasus yang nyata.",
       "img_folder" : "assets/img/e-voting/",
       "img_count" : 21,
       "img_main" : "main",
-      "fitur" : "<ol><li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates, eveniet.</li><li>Loremipsumdolor sit amet consectetur.</li><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Blanditiis fugit harum quo possimus cum nolla nobis rationevoluptatibus mollitia?</li><li>Lorem, ipsum.</li></ol>", 
-      "teknologi" : ["Boostrap 4", "CI4", "Template Stisla"],
+      "fitur" : "<ol><li>Multiuser (Admin dan Siswa)</li><li>Fitur Admin : <ul><li>Informatif Dashboard</li><li>Memulai dan memberhentikan acara pemilihan</li><li>CRUD data kandidat</li><li>CRUD data peserta/siswa</li><li>Upload excel untuk insert data peserta</li><li>Lihat Hasil Voting</li><li>Cetak laporan kandidat</li><li>Cetak laporan peserta (bisa pdf atau excel)</li><li>Cetak laporan hasil pemilihan</li><li>Edit Profile</li><li>Setting nama dan logo sekolah</li></ul></li><li>Fitur Siswa : <ul><li>Login</li><li>Memilih kandidat osis</li><li>Jika sudah memilih, siswa otomatis tidak bisa melakukan pemilihan lagi</li></ul></li></ol>", 
+      "teknologi" : [ "CI4","Boostrap 4", "Template Stisla", "Sweetalert2", "DOMPdf"],
       "keterangan_tambahan" : [
         " Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error."
       ]
@@ -22,14 +22,14 @@
       "judul" : "Pengelolaan Kas Masjid",
       "harga" : "Rp. 50.000",
       "kategori" : ["PHP NATIVE", "WEB"],
-      "deskripsi" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, modi cupiditate. Ducimus, cum maxime explicabo aliquam laudantium ratione quidem eum dolores earum ad voluptate vero!",
+      "deskripsi" : "Sistem Pengelolaan Kas Masjid ini di tujukan untuk mempermudah dalam mengelola keuangan suatu masjid. Program ini cocok untuk dijadikan bahan pembelajaran ataupun bisa langsung digunakan untuk kebutuhan pengelolaan keuangan masjid.",
       "img_folder" : "assets/img/kas-masjid-native/",
       "img_count" : 21,
       "img_main" : "main",
-      "fitur" : "<ol><li>Lorem ipsum dolor sit amet consectetur adipisicing elit.Voluptates, eveniet.</li><li>Loremipsumdolor sit amet consectetur.</li><li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Blanditiis fugit harum quo possimus cum nolla nobis rationevoluptatibus mollitia?</li><li>Lorem, ipsum.</li><li>lorem :<ol><li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus commodi odio ipsa at, voluptatem teneturpraesentium fugit quasi saepe tempora quibusdam distinctio itaque corrupti magnam, obcaecati eaque dicta assumenda ducimus.</li><li>Lorem ipsum dolor sit amet consectetur.</li></ol></li></ol>", 
-      "teknologi" : ["Boostrap 4", "Template Stisla", "PHP NATIVE"],
+      "fitur" : "<ol><li>Multilevel login(admin, takmir, jamaah)</li><li>login dan register untuk jamaah baru</li><li>CRUD data kas masuk(Admin, Takmir)</li><li>CRUD data kas keluar(Admin, Takmir)</li><li>Lihat data rekapitulasi (Admin, Takmir, Jamaah)</li><li>Cetak laporan kas masuk, kas keluar, rekapitulasi (Admin, Takmir, Jamaah)</li><li>Management user (Admin)</li><li>Edit profile (Admin, Takmir, Jamaah)</li><li>informatif dashboard</li></ol>", 
+      "teknologi" : ["PHP NATIVE", "Boostrap 4", "Template SB Admin 2", "Sweetalert2", "DOMPdf", "Datatables"],
       "keterangan_tambahan" : [
-        " Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error.",
+        "Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error.",
         "Kode dilengkapi dengan komentar-komentar sehingga mudah dipahami.",
         "Bisa custom sesuai kebutuhan, tetapi akan di kenakan biaya tambahan."
       ]
