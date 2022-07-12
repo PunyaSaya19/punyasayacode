@@ -3,6 +3,22 @@
   "datas" : 
   [
     {
+      "id" : "PRJ004",
+      "judul" : "Aplikasi Laundry",
+      "harga" : "Rp. 50.000",
+      "kategori" : ["PHP NATIVE", "WEB"],
+      "deskripsi" : "Aplikasi ini di desain untuk memudahkan dalam melakukan transaksi/cucian di suatu laundry. Aplikasi ini juga sudah support multi outlet/cabang sehingga lebih flexsibel.",
+      "img_folder" : "assets/img/laundry-native/",
+      "img_count" : 19,
+      "img_main" : "main",
+      "fitur" : "<ol><li>Multilevel user (Admin, Kasir dan Owner)</li><li>Fitur Admin : <ul><li>Informatif Dashboard</li><li>CRUD data Outlet/Cabang</li><li>CRUD data harga paket per cabang/outletnya</li><li>CRUD data pelanggan&nbsp;</li><li>Menambah transaksi</li><li>CRUD data transaksi/cucian</li><li>Lihat detail cucian</li><li>cetak invoice</li><li>CRUD data user</li><li>Cetak laporan keuangan (bisa semua outlet atau hanya outlet tertentu saja)</li></ul></li><li>Fitur Kasir : <ul><li>Informatif Dashboard</li><li>CRUD data pelanggan&nbsp;</li><li>Menambah transaksi</li><li>CRUD data transaksi/cucian</li><li>Lihat detail cucian</li><li>cetak invoice</li></ul></li><li>Fitur Owner : <ul><li>Informatif Dashboard</li><li>Cetak laporan keuangan (bisa semua outlet atau hanya outlet tertentu saja)</li></ul></li></ol>", 
+      "teknologi" : [ "PHP NATIVE","Boostrap 4", "Template Stisla", "Sweetalert2", "DOMPdf", "Datatables"],
+      "keterangan_tambahan" : [
+        " Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error.",
+        "Bisa custom sesuai kebutuhan, tetapi akan di kenakan biaya tambahan."
+      ]
+    },
+    {
       "id" : "PRJ003",
       "judul" : "Toko Sembako",
       "harga" : "Rp. 50.000",
