@@ -3,6 +3,23 @@
   "datas" : 
   [
     {
+      "id" : "PRJ006",
+      "judul" : "Sistem Parkir",
+      "harga" : "Rp. 50.000",
+      "kategori" : ["LARAVEL 8", "WEB"],
+      "deskripsi" : "Sistem Parkir ini merupakan sebuah program yang di buat untuk melakukan perhitungan biaya parkir kendaraan per jam nya.Cocok buat belajar atau tugas, terutama untuk seseorang yang baru belajar framework LARAVEL.",
+      "img_folder" : "assets/img/sistem-parkir-lrv8/",
+      "img_count" : 15,
+      "img_main" : "main",
+      "fitur" : "<ol><li>Multilevel Login(Admin, Petugas)</li><li>Informatif Dashboard (Sudah ada grafik pendapatan per bulan juga)</li><li>Fitur Admin : <ul><li>Kelola Data Jenis Kendaraan (CRUD)</li><li>Kelola Data Petugas (CRUD)</li><li>Menginput Data Parkir Masuk</li><li>Mengedit dan Menghapus data Parkir Masuk</li><li>Menginput Data Parkir Keluar</li><li>Menghapus data Parkir Keluar</li><li>Mencetak Laporan dalam bentuk PDF</li></ul></li><li>Fitur Petugas : <ul><li>Melihat List Jenis Kendaraan (CRUD)</li><li>Menginput Data Parkir Masuk</li><li>Mengedit dan Menghapus data Parkir Masuk</li><li>Menginput Data Parkir Keluar</li><li>Menghapus data Parkir Keluar</li></ul></li></ol>", 
+      "teknologi" : [ "LARAVEL 8","Boostrap 4", "Template Stisla", "Sweetalert2", "Datatables"],
+      "keterangan_tambahan" : [
+        "Aplikasi dijamin aman karena sudah di tes dan di pastikan tidak ada error.",
+        "Bisa custom sesuai kebutuhan, tetapi akan di kenakan biaya tambahan.",
+        "Cocok buat yang sedang belajar framework laravel."
+      ]
+    },
+    {
       "id" : "PRJ005",
       "judul" : "Sistem Pengaduan Masyarakat",
       "harga" : "Rp. 50.000",
