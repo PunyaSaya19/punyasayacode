@@ -40,7 +40,7 @@
     <section id="main" class="mb-4">
       <div class="container">
         <div class="row" id="main-content">
-          <div class="col-md-4 col-sm-12 mb-3">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
             <div class="card px-3 pt-3 my-card shadow-sm">
               <img
                 src="assets/img/nama-project/main.png"
@@ -63,12 +63,8 @@
                     <span>Kategori 2</span>
                   </div>
                 </div>
-                <h6 class="harga">Rp. 0,-</h6>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusantium, recusandae tempore. Debitis fugit natus officiis
-                  animi, nostrum nemo tenetur voluptate...
-                </p>
+                <h6 class="harga mb-1">Rp. 0,-</h6>
+                <small class="text-muted mb-3 d-block">Terjual : 10</small>
                 <div
                   class="btn-card d-flex justify-content-center align-items-center"
                 >
@@ -181,7 +177,7 @@
                   </div>`;
           });
           tmplt += `
-          <div class="col-md-4 col-sm-12 mb-3">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
             <div class="card px-3 pt-3 my-card shadow-sm">
               <img
                 src="${e.img_folder}${e.img_main}.png"
@@ -193,15 +189,13 @@
                 <div class="tags mb-2 d-flex">
                  ${lbl}
                  </div>
-                <h6 class="harga">${e.harga}</h6>
-                <p class="card-text">
-                  ${e.deskripsi}
-                </p>
+                <h6 class="harga mb-1">${e.harga}</h6>
+                <small class="text-muted mb-2 d-block font-weight-bold">Terjual : ${e.terjual}</small>
                 <div
                   class="btn-card d-flex justify-content-center align-items-center"
                 >
-                  <a href="${url_wa}" class="btn-wa w-50 mx-1" target="_blank">Whatsapp </a>
-                  <a href="detail.html?id=${e.id}" class="btn-detail w-50 mx-1">Detail </a>
+                  <a href="${url_wa}" class="btn-wa w-50 mr-1" target="_blank">Whatsapp </a>
+                  <a href="detail.html?id=${e.id}" class="btn-detail w-50 ml-1">Detail </a>
                 </div>
               </div>
             </div>

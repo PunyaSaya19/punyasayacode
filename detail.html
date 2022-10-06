@@ -86,15 +86,9 @@
           <!-- detail -->
           <div class="col-md-6 col-sm-12" id="info">
             <h2 class="mb-0" id="judul">Project 1</h2>
-            <h6 class="harga mb-4" id="harga">Rp.0,-</h6>
+            <h6 class="harga mb-2" id="harga">Rp.0,-</h6>
 
-            <h6 class="sub-title">Deskripsi :</h6>
-            <p class="deskripsi" id="deskripsi">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
-              tempore ut deserunt alias ad culpa quod adipisci perspiciatis
-              dolores nobis dolor, labore, repudiandae placeat magni quaerat
-              natus, aliquam facere hic.
-            </p>
+            <h6 class="sub-title mb-4">Terjual : <span id="terjual">10</span></h6>
 
             <h6 class="sub-title">Fitur-fitur :</h6>
             <div class="fitur" id="fitur">
@@ -210,7 +204,7 @@
       const wa_beli = document.querySelector("#wa-beli");
       const judul = document.querySelector("#judul");
       const harga = document.querySelector("#harga");
-      const deskripsi = document.querySelector("#deskripsi");
+      const terjual = document.querySelector("#terjual");
       const fitur = document.querySelector("#fitur");
       const teknologi = document.querySelector("#teknologi");
       const keterangan = document.querySelector("#keterangan");
@@ -298,7 +292,7 @@
         wa_beli.setAttribute("target", "_blank");
         judul.innerHTML = dt.judul;
         harga.innerHTML = dt.harga;
-        deskripsi.innerHTML = dt.deskripsi;
+        terjual.innerHTML = dt.terjual;
         fitur.innerHTML = dt.fitur;
         teknologi.innerHTML = tmpltTeknologi(dt.teknologi);
         console.log(dt.keterangan_tambahan);
