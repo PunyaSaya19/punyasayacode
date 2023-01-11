@@ -6,7 +6,7 @@
       "id" : "PRJ006",
       "judul" : "Sistem Parkir",
       "harga" : "Rp. 70.000",
-      "terjual" : 4,
+      "terjual" : 1,
       "kategori" : ["LARAVEL 8", "WEB"],
       "img_folder" : "assets/img/sistem-parkir-lrv8/",
       "img_count" : 15,
