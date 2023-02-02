@@ -74,11 +74,14 @@
                 onclick="gantiImg(this)"
               />
             </div>
-            <div
-              class="btn-img d-flex justify-content-center align-items-center"
-            >
+            <div class="btn-img d-flex justify-content-center align-items-center">
               <a href="index.html" class="btn-back w-50 mx-1">Kembali</a>
               <a href="" class="btn-wa w-50 mx-1" id="wa-beli">Whatsapp</a>
+            </div>
+            <div class="mt-2">
+              <a href="#" class="btn-live mx-1" id="btn-live" target="_blank">
+                Live Demo
+              </a>
             </div>
             <hr class="w-100" />
           </div>
@@ -88,7 +91,9 @@
             <h2 class="mb-0" id="judul">Project 1</h2>
             <h6 class="harga mb-2" id="harga">Rp.0,-</h6>
 
-            <h6 class="sub-title mb-4">Terjual : <span id="terjual">10</span></h6>
+            <h6 class="sub-title mb-4">
+              Terjual : <span id="terjual">10</span>
+            </h6>
 
             <h6 class="sub-title">Fitur-fitur :</h6>
             <div class="fitur" id="fitur">
@@ -179,6 +184,11 @@
                 alt="Metode Pembayaran"
                 class="img-mtd-pby"
               />
+              <img
+                src="assets/img/metode-pembayaran/jago.jpg"
+                alt="Metode Pembayaran"
+                class="img-mtd-pby"
+              />
             </div>
           </div>
         </div>
@@ -208,13 +218,14 @@
       const fitur = document.querySelector("#fitur");
       const teknologi = document.querySelector("#teknologi");
       const keterangan = document.querySelector("#keterangan");
+      const btn_live = document.querySelector("#btn-live");
       const xhr = new XMLHttpRequest();
 
       // action
       xhr.onload = () => {
         if (xhr.status == 200) {
           const datas = JSON.parse(xhr.responseText);
-          console.log(datas);
+          // console.log(datas);
           const data_detail = searchData(datas.datas);
           isiKontenDetail(data_detail, datas.wa);
           hiddenLoadingScreen();
@@ -295,8 +306,13 @@
         terjual.innerHTML = dt.terjual;
         fitur.innerHTML = dt.fitur;
         teknologi.innerHTML = tmpltTeknologi(dt.teknologi);
-        console.log(dt.keterangan_tambahan);
+        // console.log(dt.keterangan_tambahan);
         keterangan.innerHTML = tmpltKeterangan(dt.keterangan_tambahan);
+        if(dt.live_url != null) {
+          btn_live.setAttribute('href', dt.live_url);
+        } else {
+          btn_live.classList.add('d-none');
+        }
       }
     </script>
   </body>
