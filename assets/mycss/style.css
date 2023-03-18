@@ -72,6 +72,11 @@ img.my-img-card {
   padding-left: 1rem;
 }
 
+#deskripsi_sc p {
+  margin: 3px 0;
+  font-weight: normal;
+}
+
 /* responsive */
 @media (max-width: 576px) {
   /* Home */
