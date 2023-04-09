@@ -30,7 +30,8 @@ function searchData(dt) {
   if(url == '') {
     window.location = 'index.html'
   }
-  const id_now = url.split("=")[1];
+  let new_url = url.split("&")[0];
+  const id_now = new_url.split("=")[1];
   let result = null;
   dt.forEach((e) => {
     if (e.id == id_now) {
