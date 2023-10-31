@@ -47,7 +47,7 @@
       "id" : "PRJ004",
       "type" : "premium",
       "judul" : "Aplikasi Pengelolaan Laundry - PHP NATIVE",
-      "harga" : "Rp. 100.000",
+      "harga" : "Rp. 150.000",
       "terjual" : 6,
       "kategori" : ["PHP NATIVE", "WEB"],
       "live_url" : "https://laundry.ps-code.my.id/login/index.php",
